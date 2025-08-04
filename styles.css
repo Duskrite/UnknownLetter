@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    position: relative;
+    border: 2px solid #3a7bd5;
+    z-index: 10;
+}
+
+h1 {
+    color: #1e3c72;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.btn {
+    padding: 12px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: 48%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-yes {
+    background-color: #2F5EB5;
+    color: white;
+}
+
+.btn-no {
+    background-color: #24488A;
+    color: white;
+    position: relative;
+}
+
+.btn-yes:hover {
+    background-color: #142850;
+    transform: translateY(-2px);
+}
+
+.btn-no:hover {
+    background-color: #5649c0;
+    transform: translateY(-2px);
+}
+
+.sparkle {
+    position: fixed;
+    font-size: 1.5rem;
+    color: #fdcb6e;
+    z-index: 1;
+    animation: floatAround 15s linear infinite;
+    animation-delay: var(--animation-delay);
+    left: var(--x-start);
+    top: var(--y-start);
+}
+
+.sword {
+    position: fixed;
+    font-size: 2rem;
+    color: #ff0000;
+    z-index: 1;
+    animation: floatAround 8s linear infinite;
+    animation-delay: var(--animation-delay);
+    left: var(--x-start);
+    top: var(--y-start);
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    30% {
+        transform: translate(20vw, -10vh) rotate(120deg);
+    }
+    50% {
+        transform: translate(40vw, 20vh) rotate(240deg);
+    }
+    70% {
+        transform: translate(-20vw, 30vh) rotate(360deg);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0) rotate(420deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
